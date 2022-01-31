@@ -1,3 +1,4 @@
+/* DELETE LATER
 .block-1{
     height: 300px;
    flex-grow: 1;
@@ -6,9 +7,72 @@
 .block-2{
     height: 300px;
     flex-grow: 1;   
+} */
+
+
+/* BACKGROUND GRADIENT  AND COLORS*/
+#gradient{
+background: linear-gradient(0deg,#DBDBD2 80%,#009688 20%);
+background-repeat: no-repeat;
+}
+.bc-user{
+    background-color:#EAEAEA;
+   
 }
 
-#gradient{
-background: linear-gradient(0deg,#DBDBD2 70%,#009688 30%);
-background-repeat: no-repeat;
+.bc-notify{
+    background-color: #8EDAFC;
+    flex-grow: 1;
+}
+
+
+/* IMG */
+.user-pic{
+    height:80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* ICONS */
+.fa-redo-alt{
+    font-size: 30px;
+    color:#B1B1B1
+}
+.fa-comment-alt{
+    font-size: 30px;
+    color:#B1B1B1
+}
+.fa-ellipsis-v{
+    font-size: 30px;
+    color:#B1B1B1
+}
+
+.fa-bell-slash{
+    color:#8EDAFC;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+/*  */
+.bc-notify span{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+div p{
+    margin: 0%;
+}
+
+/* NAV BAR CONTATTI */
+
+.contacts-bar{
+    height: 500px;
+    overflow-y: auto;
 }
