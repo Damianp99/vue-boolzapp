@@ -11,10 +11,16 @@
 
 
 /* BACKGROUND GRADIENT  AND COLORS*/
-#gradient{
+html{
+    height: 100%;
+}
+
+
+ #gradient{
 background: linear-gradient(0deg,#DBDBD2 80%,#009688 20%);
 background-repeat: no-repeat;
 }
+
 .bc-user{
     background-color:#EAEAEA;
    
@@ -57,6 +63,10 @@ background-repeat: no-repeat;
     
 }
 
+.input-chat i{
+color: #6B7376;
+}
+
 /*  */
 .bc-notify span{
     position: relative;
@@ -70,9 +80,36 @@ div p{
     margin: 0%;
 }
 
-/* NAV BAR CONTATTI */
+/* NAV BAR */
 
 .contacts-bar{
     height: 500px;
     overflow-y: auto;
 }
+
+/* CHAT WITH CONTACTS */
+
+.chat-header i{
+    color:#B1B1B1;
+    font-size: 25px;
+    padding-right: 10px;
+    
+}
+
+ textarea{
+    overflow-y: auto;
+    outline: none;
+    border: 2px solid #F3EEEA;
+    width: 80%;
+	height: 30px;
+    resize: none;
+ }
+
+.chat{
+    overflow-y: auto;
+    background-image: url(../img/mine.jpg);
+    max-width: 100%;
+    height: calc(100% - 150px);
+}
+
+
