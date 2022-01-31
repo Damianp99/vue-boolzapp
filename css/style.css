@@ -1,0 +1,14 @@
+.block-1{
+    height: 300px;
+   flex-grow: 1;
+}
+
+.block-2{
+    height: 300px;
+    flex-grow: 1;   
+}
+
+#gradient{
+background: linear-gradient(0deg,#DBDBD2 70%,#009688 30%);
+background-repeat: no-repeat;
+}
