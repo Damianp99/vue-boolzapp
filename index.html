@@ -69,6 +69,10 @@
                         <div class="col-10 py-3" v-for="(contact,index) in contacts" v-if="isConfirmed(index)">
                             <img class=" user-pic " :src=" `img/avatar${contact.avatar}.jpg`" alt="">
                             <span class=" fw-bold ms-3">{{contact.name}}</span>
+                            <!-- <div> -->
+                            <span class="text-muted small">Ultimo accesso oggi alle <span>{{time}}</span></span>
+                            <!-- </div> -->
+
                         </div>
 
                         <div role="button">
