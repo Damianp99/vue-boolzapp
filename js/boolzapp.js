@@ -5,6 +5,10 @@ Milestone 1
 Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse
 Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
 
+Milestone 2
+Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
+Click sul contatto mostra la conversazione del contatto cliccato
+
 Consigli e raccomandazioni:
 Spendiamo un po' di tempo per quel che riguarda l'analisi del layout prima di buttarci subito sul codice
 Cerchiamo di mettere in pratica tutte le best practice imparate a partire dalla centralizzazione.
@@ -19,13 +23,16 @@ NON MODIFICATE LA STRUTTURA DATI FORNITA
 
 console.log('Vue ok', Vue);
 Vue.config.devtools = true
+dayjs.extend(dayjs_plugin_customParseFormat);
 
 const app = new Vue({
     el: '#root',
     data: {
-        currenContact: 0,
+        myMessage: '',
+        currentContact: 0,
+        time: dayjs().format('DD/MM/YYYY HH:MM:ss'),
         user: {
-            name: 'Nome Utente',
+            name: 'Nome utente',
             avatar: '_io'
         },
         contacts: [
@@ -110,6 +117,17 @@ const app = new Vue({
             },
 
         ],
+
+    },
+    methods: {
+        selectContact(index) {
+            this.currentContact = index;
+            console.log(this.currentContact)
+        },
+        isConfirmed(index) {
+            return index === this.currentContact;
+
+        },
 
     },
 
