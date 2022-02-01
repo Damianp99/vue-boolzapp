@@ -26,8 +26,8 @@
                                 <div
                                     class="col d-flex flex-direction-column flex-wrap align-items-center justify-content-between bc-user">
                                     <div class="py-3">
-                                        <img class="user-pic" src="img/avatar_io.jpg" alt="">
-                                        <span class=" ms-3">Nome utente</span>
+                                        <img class="user-pic" :src="`img/avatar${user.avatar}.jpg`" alt="">
+                                        <span class=" ms-3">{{user.name}}</span>
                                     </div>
 
                                     <div class="px-2">
@@ -51,9 +51,9 @@
                             </div>
                             <div class="row contacts-bar bg-light">
 
-                                <div class="col-12 border-bottom py-2">
-                                    <img class="user-pic" src="img/avatar_1.jpg" alt="">
-                                    <span class=" fw-bold ms-3">Michele</span>
+                                <div class="col-12 border-bottom py-5" v-for="(contact, index) in contacts">
+                                    <img class="user-pic" :src="`img/avatar_${index + 1}.jpg`" alt="">
+                                    <span class=" fw-bold ms-3">{{contact.name}}</span>
                                 </div>
 
                             </div>

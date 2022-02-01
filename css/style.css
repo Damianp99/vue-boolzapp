@@ -22,8 +22,8 @@ background-repeat: no-repeat;
 
 /* IMG */
 .user-pic{
-    height:80px;
-    width: 80px;
+    height:70px;
+    width: 70px;
     border-radius: 50%;
 }
 
@@ -86,7 +86,7 @@ div p{
 /* NAV BAR */
 
 .contacts-bar{
-    height: 500px;
+   height: 600px;
     overflow-y: auto;
 }
 
