@@ -113,7 +113,7 @@ const app = new Vue({
             },
             {
                 name: 'Luisa',
-                avatar: '_4',
+                avatar: '_6',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -131,6 +131,18 @@ const app = new Vue({
         ],
 
     },
+    /*
+    
+    funziona in parte , non mi cambia l'immagine e solo il nome (ex: immagine di avatar 1-fisso- e il name della ricerca)
+
+    computed: {
+        searchContacts() {
+            return this.contacts.filter((contact) => {
+                return contact.name.toLowerCase().match(this.search.toLowerCase());
+            });
+        },
+    },
+    */
     methods: {
         selectContact(index) {
             this.currentContact = index;
@@ -163,7 +175,13 @@ const app = new Vue({
             setTimeout(this.botMessage, 1000);
 
         },
-
+        searchContact(contact) {
+            if (this.search === '') {
+                return true;
+            } else {
+                return contact.name.toLowerCase().includes(this.search.toLowerCase());
+            }
+        }
 
 
     },
