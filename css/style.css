@@ -28,6 +28,7 @@ background-repeat: no-repeat;
 }
 
 /* ICONS */
+
 .fa-redo-alt{
     font-size: 30px;
     color:#B1B1B1
@@ -123,10 +124,14 @@ div p{
     background-color: #D5F9BA;
     padding: 15px;
     border-radius:10px;
+    margin-left: 550px;
+    
+    
 }
 
 .received{
     background-color: #FFF;
     padding: 15px;
     border-radius:10px;  
+    margin-left: 60px;
 }
