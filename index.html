@@ -48,7 +48,8 @@
                                 </div>
                                 <div class="search-bar py-1">
                                     <i class="fas fa-search search-input text-muted "></i>
-                                    <input type="text" class="search-contact w-100" placeholder="Cerca contatto">
+                                    <input type="text" class="search-contact w-100" placeholder="Cerca contatto"
+                                        v-model="search" @keyup.enter="searchContact()">
                                 </div>
                             </div>
                             <div class="row contacts-bar bg-light">
@@ -82,16 +83,19 @@
                         </div>
                     </div>
                     <div class="chat-bg container">
-                        <div class="row d-flex  py-3 " v-for="(message,index) in contacts[currentContact].messages">
-                            <div :class="message.status === 'sent' ? 'sent' : 'received'" class="col-3">
-                                {{message.text}}</div>
+                        <div class="row gx-0 d-flex  py-3 "
+                            v-for="(message,index) in contacts[currentContact].messages">
+                            <div :class="message.status === 'sent' ? 'sent' : 'received'" class="col-3 p-2">
+                                {{message.text}}
+                                <div class="text-muted extra-small"> {{message.date}} </div>
+                            </div>
 
                         </div>
 
                     </div>
                     <div class="input-chat d-flex justify-content-evenly align-items-center">
                         <i class="far fa-smile" role="button"></i>
-                        <input type="text" class="text-area">
+                        <input type="text" class="text-area" v-model.trim="myMessage" @keyup.enter="sentMessage">
                         <i class="fas fa-microphone" role="button"></i>
                     </div>
 
